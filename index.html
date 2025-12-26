@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uma Mensagem Especial 💌</title>
+
   <style>
     body {
       margin: 0;
@@ -63,7 +64,27 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Corações animados */
+    /* Galeria */
+    .galeria {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .galeria img {
+      width: 140px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.6);
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.08);
+    }
+
+    /* Corações */
     .hearts {
       position: fixed;
       top: 0;
@@ -92,38 +113,28 @@
       }
     }
   </style>
-  .galeria {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.galeria img {
-  width: 140px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.6);
-  transition: transform 0.3s;
-}
-
-.galeria img:hover {
-  transform: scale(1.08);
-}
 </head>
+
 <body>
   <div class="hearts" id="hearts"></div>
+
   <div class="container">
+
     <div class="galeria">
-  <img src="img/foto1.jpg" alt="Nossa foto 1">
-  <img src="img/foto2.jpg" alt="Nossa foto 2">
-  <img src="img/foto3.jpg" alt="Nossa foto 3">
-</div>
+      <img src="img/foto1.jpg" alt="Nossa foto 1">
+      <img src="img/foto2.jpg" alt="Nossa foto 2">
+      <img src="img/foto3.jpg" alt="Nossa foto 3">
+    </div>
+
     <h1>Giovanna, quero te dizer algo</h1>
+
     <button onclick="mostrarMensagem()">Clique aqui</button>
+
     <div class="mensagem" id="mensagem">
-      <p>Você fez eu gostar de passar cada momento com você. 💌<br><br>
-      Eu só quero que você saiba que quero passar muitos mais. ❤️</p>
+      <p>
+        Você fez eu gostar de passar cada momento com você. 💌<br><br>
+        Eu só quero que você saiba que quero passar muitos mais. ❤️
+      </p>
     </div>
   </div>
 
@@ -132,7 +143,6 @@
       document.getElementById('mensagem').style.display = 'block';
     }
 
-    // Efeito de corações subindo
     const heartsContainer = document.getElementById('hearts');
     const emojis = ['💖','❤️','💘','💕','💞'];
 
