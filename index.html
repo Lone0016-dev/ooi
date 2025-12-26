@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- CSS --> 
-
+  
   <style>
     body {
       margin: 0;
@@ -70,6 +70,21 @@
     }
 
     /* Galeria */
+    .galeria {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* quebra no celular */
+}
+
+.galeria img {
+  width: 220px;      /* tamanho mediano */
+  height: auto;      /* não corta */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
     .galeria {
       display: flex;
       gap: 12px;
@@ -172,5 +187,6 @@
 
 </body>
 </html>
+
 
 
