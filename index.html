@@ -92,10 +92,33 @@
       }
     }
   </style>
+  .galeria {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.galeria img {
+  width: 140px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.08);
+}
 </head>
 <body>
   <div class="hearts" id="hearts"></div>
   <div class="container">
+    <div class="galeria">
+  <img src="img/foto1.jpg" alt="Nossa foto 1">
+  <img src="img/foto2.jpg" alt="Nossa foto 2">
+  <img src="img/foto3.jpg" alt="Nossa foto 3">
+</div>
     <h1>Giovanna, quero te dizer algo</h1>
     <button onclick="mostrarMensagem()">Clique aqui</button>
     <div class="mensagem" id="mensagem">
@@ -125,4 +148,5 @@
   </script>
 </body>
 </html>
+
 
