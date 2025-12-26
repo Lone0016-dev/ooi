@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uma Mensagem Especial 💌</title>
 
-  <style>
-     📁 projeto
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS --> projeto
  ├── index.html
- └── 📁 img
+ └──  img
       ├── foto1.jpg
       ├── foto2.jpg
       └── foto3.jpg
 
+  <style>
     body {
       margin: 0;
       padding: 0;
@@ -29,12 +30,12 @@
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.25);
       border-radius: 20px;
       padding: 40px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-      backdrop-filter: blur(10px);
-      max-width: 400px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(12px);
+      max-width: 420px;
     }
 
     h1 {
@@ -47,8 +48,8 @@
       background: #ff4b5c;
       color: white;
       border: none;
-      padding: 12px 25px;
-      border-radius: 25px;
+      padding: 12px 28px;
+      border-radius: 30px;
       font-size: 16px;
       cursor: pointer;
       transition: 0.3s;
@@ -56,7 +57,7 @@
 
     button:hover {
       background: #ff2e4d;
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
 
     .mensagem {
@@ -70,27 +71,29 @@
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     /* Galeria */
     .galeria {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
       margin-bottom: 20px;
     }
 
     .galeria img {
-      width: 140px;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(255,255,255,0.6);
       transition: transform 0.3s;
     }
 
     .galeria img:hover {
-      transform: scale(1.08);
+      transform: scale(1.1);
     }
 
     /* Corações */
@@ -107,7 +110,6 @@
 
     .heart {
       position: absolute;
-      color: rgba(255, 255, 255, 0.6);
       animation: float 6s infinite ease-in;
     }
 
@@ -125,15 +127,17 @@
 </head>
 
 <body>
+
+  <!-- Corações -->
   <div class="hearts" id="hearts"></div>
 
+  <!-- Conteúdo -->
   <div class="container">
 
     <div class="galeria">
-      <img src="img/foto1.jpg">
-<img src="img/foto2.jpg">
-<img src="img/foto2.jpg">
-
+      <img src="img/foto1.jpg" alt="Foto 1">
+      <img src="img/foto2.jpg" alt="Foto 2">
+      <img src="img/foto3.jpg" alt="Foto 3">
     </div>
 
     <h1>Giovanna, quero te dizer algo</h1>
@@ -146,8 +150,10 @@
         Eu só quero que você saiba que quero passar muitos mais. ❤️
       </p>
     </div>
+
   </div>
 
+  <!-- JavaScript -->
   <script>
     function mostrarMensagem() {
       document.getElementById('mensagem').style.display = 'block';
@@ -163,15 +169,10 @@
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
       heartsContainer.appendChild(heart);
+
       setTimeout(() => heart.remove(), 6000);
     }, 500);
   </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
